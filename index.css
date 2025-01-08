@@ -1,3 +1,7 @@
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
 nav{ 
     /* background-color: rgb(173, 113, 41) !important;  */
     height: 3rem;
@@ -47,15 +51,15 @@ header{
     width: 100%;
 }
 
-h1{
-    font-size: 3rem;
+/* h1{ */
+    /* font-size: 3rem;
     max-width: 80%;
     font-family: jetBrains mono;
     line-height: 2;
     color: white !important;
     font-weight: 900;
     text-align: right;
-}
+} */
 h1 span{
     color: yellow;
     text-decoration: underline;
@@ -81,12 +85,133 @@ video{
     font-family: jetBrains mono;
     /* font-weight: 800; */
 }
+.hero-content h1{color: yellow; font-size: 5rem;}
+.hero-content p {color: white; font-size: 1.5rem;}
+.scroll-arrow span{ font-size: 4rem;}
+/* Hero Section */
+.hero-content h1, .hero-content p, .cta-btn, .scroll-arrow {
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Button Styles */
+  .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ff4c4c;
+    padding: 18px 35px;
+    box-shadow: 0 5px 15px rgba(255, 75, 75, 0.4);
+  }
+  
+  /* Scroll Arrow Styles */
+  .scroll-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .scroll-arrow span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    animation: scrollAnim 1.5s infinite;
+  }
+  
+  .scroll-arrow span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .scroll-arrow span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Arrow Animation */
+  @keyframes scrollAnim {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px) rotate(45deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px) rotate(45deg);
+    }
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Slide-in Animation */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  /* About Section */
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  /* Fade-in Effect for Paragraph */
+  .fade-in {
+    font-size: 1.2rem;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  #about1{ font-size:4rem; font-weight: 800;}
 
 @media screen and (max-width:500px) {
     
-    .navbar-nav{
-        background-color:;
-        /* width: 100vw; */
-        
-    }
+    .hero-content h1{color: yellow; font-size: 2rem;}
+.hero-content p {color: white; font-size: 1rem;}
 }
