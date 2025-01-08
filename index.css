@@ -1,0 +1,23 @@
+nav{ 
+    background-color: rgb(173, 113, 41) !important; 
+    height: 3rem;
+}
+nav img{ height: 2rem;}
+.navbar-toggler{
+    border: 3px red;
+    border: none !important;
+    
+}
+#title{
+    font-family: jetBeans Mono;
+    color: rgb(37, 20, 1);
+    font-weight: 800;
+}
+@media screen and (max-width:500px) {
+    
+    .navbar-nav{
+        background-color:;
+        /* width: 100vw; */
+        
+    }
+}
