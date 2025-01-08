@@ -1,5 +1,5 @@
 nav{ 
-    background-color: rgb(173, 113, 41) !important; 
+    /* background-color: rgb(173, 113, 41) !important;  */
     height: 3rem;
 }
 nav img{ height: 2rem;}
@@ -13,6 +13,75 @@ nav img{ height: 2rem;}
     color: rgb(37, 20, 1);
     font-weight: 800;
 }
+#current-page{ 
+    color: rgb(1, 0, 49);
+    text-decoration: underline;
+    font-weight: 700;
+    /* font-size: 1.5rem; */
+}
+#hero{
+    position: relative;
+    margin: 0;
+    height: 65vh;
+}
+#hero::before{
+    content: '';
+    background: rgba(15, 21, 37,.8);
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+#hero .container{
+    width: 80%;
+    margin:0 auto;
+    padding: 4rem 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+header{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+h1{
+    font-size: 3rem;
+    max-width: 80%;
+    font-family: jetBrains mono;
+    line-height: 2;
+    color: white !important;
+    font-weight: 900;
+    text-align: right;
+}
+h1 span{
+    color: yellow;
+    text-decoration: underline;
+}
+video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100% ;
+    height: 100%;
+    z-index: -2;
+}
+.container button{
+    background-color: var(--color-main);
+    color: white;
+    padding: 1rem;
+    /* border: 3px solid rgb(69, 31, 1); */
+    outline: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    /* font-family: 'Figtree', sans-serif; */
+    font-family: jetBrains mono;
+    /* font-weight: 800; */
+}
+
 @media screen and (max-width:500px) {
     
     .navbar-nav{
