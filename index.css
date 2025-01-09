@@ -95,6 +95,11 @@ video{
     z-index: 2;
     position: relative;
   }
+ 
+  .btn{ 
+    background-color: #c4540a !important;
+    border: none !important;
+  }
   
   /* Button Styles */
   .cta-btn {
@@ -472,6 +477,14 @@ video{
 
   .promo-banner {
     margin-top: 20px;
+  }
+  .collapse{
+    background-color: #d9d5d2 !important;
+    height: 100vh !important;
+    z-index: 1111;
+    width: 100vw !important;
+    padding: 1rem !important;
+
   }
 }
 /* Ensure category header is centered */

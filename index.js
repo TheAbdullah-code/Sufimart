@@ -167,4 +167,22 @@ function showCategory(category) {
 }
 
 
+{/* <script> */}
+document.addEventListener( 'DOMContentLoaded', function() {
+  var splide = new Splide( '.splide' );
+  splide.mount();
+} );
+// </script>
 
+new Splide( '#slider1' ).mount();
+
+
+new Splide( '#slider2' ).mount();
+
+
+new Splide( '#slider3' ).mount();
+new Splide( '.splide' ).mount();
+
+
+
+AOS.init();
